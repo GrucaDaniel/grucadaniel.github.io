@@ -1706,6 +1706,10 @@ input, select, textarea {
 
 /* Container */
 
+ul.container {
+	list-style: none;
+}
+
 	.container {
 		margin: 0 auto;
 		max-width: calc(100% - 4.5em);
@@ -2417,23 +2421,27 @@ input, select, textarea {
 
 /* Icons */
 
-	ul.icons {
-		cursor: default;
-		list-style: none;
-		padding-left: 0;
+ul.icons {
+	cursor: default;
+	list-style: none;
+	padding-left: 0;
+}
+
+	ul.icons li {
+		display: inline-block;
+		padding: 0 0.75em 0 0;
 	}
 
-		ul.icons li {
-			display: inline-block;
-			padding: 0 1em 0 0;
+		ul.icons li:last-child {
+			padding-right: 0;
 		}
 
-			ul.icons li:last-child {
-				padding-right: 0 !important;
-			}
+		ul.icons li > a, ul.icons li > span {
+			border: 0;
+		}
 
-			ul.icons li .icon:before {
-				font-size: 1.25em;
+			ul.icons li > a .label, ul.icons li > span .label {
+				display: none;
 			}
 
 /* Table */
@@ -2814,6 +2822,21 @@ input, select, textarea {
 					#header > nav ul li:first-child {
 						border-top: 0;
 					}
+/* Contact */
+
+ul.contact {
+	list-style: none;
+	padding: 2;
+}
+
+	ul.contact > li {
+		padding: 0;
+		margin: 1.5em 0 0 0;
+	}
+
+		ul.contact > li:first-child {
+			margin-top: 0;
+		}
 
 /* Wrapper */
 
@@ -3314,3 +3337,5 @@ input, select, textarea {
 			}
 
 	}
+
+	
